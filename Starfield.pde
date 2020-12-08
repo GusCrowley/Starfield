@@ -1,19 +1,19 @@
-Star[] Starfield= new Star[1000];
+Star[] starfield= new Star[300];
 void setup() {
-  background (0,0,0);
+  background (0, 0, 0);
   size (600, 600);
-  for (int i= 0; i<Starfield.length; i++) {
-    Starfield[i]= new Star();
-    Starfield[Starfield.length-1]= new Odd2();
-    Starfield[Starfield.length-2]= new Odd2();
-    Starfield[Starfield.length-3]= new Odd2();
-    Starfield[Starfield.length-4]= new Odd2();
-    Starfield[Starfield.length-5]= new Odd2();
+  for (int i= 0; i<starfield.length; i++) {
+    starfield[i]= new Star();
+    starfield[starfield.length-1]= new DarkStar();
+    starfield[starfield.length-2]= new DarkStar();
+    starfield[starfield.length-3]= new DarkStar();
+    starfield[starfield.length-4]= new DarkStar();
+    starfield[starfield.length-5]= new DarkStar();
   }
 }
 void draw() {
-  for (int i= 0; i<Starfield.length; i++) {
-    Starfield[i].move();
-    Starfield[i].show();
+  for (int i= 0; i<starfield.length; i++) {
+    starfield[i].move();
+    starfield[i].show();
   }
 }
